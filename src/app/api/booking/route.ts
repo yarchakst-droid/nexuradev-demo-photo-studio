@@ -31,7 +31,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   }
 
-  const { packageId, date, name, email, phone, notes } = body;
+  const { packageId, date, name, email } = body;
   const lang = resolveLang(body.lang);
   const errors = DICTIONARIES[lang].booking.errors;
 
