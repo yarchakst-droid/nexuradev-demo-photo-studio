@@ -29,7 +29,7 @@ export default function Nav() {
           Loom<span className="text-clay"> Studio</span>
         </Link>
 
-        <nav className="hidden items-center gap-9 md:flex">
+        <nav className="hidden items-center gap-9 lg:flex">
           {t.nav.links.map((link) => {
             const active = pathname === link.href;
             return (
@@ -53,7 +53,7 @@ export default function Nav() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-5 md:flex">
+        <div className="hidden items-center gap-5 lg:flex">
           <LanguageSwitcher />
           <Link
             href="/booking"
@@ -66,7 +66,7 @@ export default function Nav() {
         <button
           onClick={() => setOpen((v) => !v)}
           aria-label="Menu"
-          className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 md:hidden"
+          className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 lg:hidden"
         >
           <motion.span animate={{ rotate: open ? 45 : 0, y: open ? 4 : 0 }} className="h-px w-6 bg-ink" />
           <motion.span animate={{ opacity: open ? 0 : 1 }} className="h-px w-6 bg-ink" />
@@ -81,7 +81,7 @@ export default function Nav() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="overflow-hidden bg-sand md:hidden"
+            className="overflow-hidden bg-sand lg:hidden"
           >
             <div className="flex flex-col gap-1 px-6 pb-8">
               {t.nav.links.map((link) => (
