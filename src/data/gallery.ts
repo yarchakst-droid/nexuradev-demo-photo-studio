@@ -35,7 +35,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "por-01",
     category: "Portrait",
-    title: { en: "Studio Light, No. 4", uk: "Студійне світло, №4", ru: "Студийный свет, №4" },
+    title: { en: "Golden Hour, No. 4", uk: "Золота година, №4", ru: "Золотой час, №4" },
     image: img("photo-1544005313-94ddf0286df2", 900),
     revealImage: img("photo-1536766768598-e09213fdcf22", 900),
     ratio: "portrait",
@@ -91,7 +91,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "por-03",
     category: "Portrait",
-    title: { en: "Window Light", uk: "Світло з вікна", ru: "Свет из окна" },
+    title: { en: "In Half-Light", uk: "У напівтемряві", ru: "В полутьме" },
     image: img("photo-1532170579297-281918c8ae72", 900),
     revealImage: img("photo-1581841064838-a470c740e8ee", 900),
     ratio: "tall",
@@ -115,7 +115,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "wed-05",
     category: "Wedding",
-    title: { en: "Two Families", uk: "Дві родини", ru: "Две семьи" },
+    title: { en: "Before the Ceremony", uk: "Перед церемонією", ru: "Перед церемонией" },
     image: img("photo-1622277430358-f4d134452e2e", 900),
     revealImage: img("photo-1562826772-be179f321470", 900),
     ratio: "landscape",

@@ -61,7 +61,7 @@ export const bookingPackages: BookingPackage[] = [
   {
     id: "editorial-brand",
     name: { en: "Editorial / Brand", uk: "Редакційна / Бренд", ru: "Редакционная / Бренд" },
-    duration: { en: "Half day", uk: "Половина дня", ru: "Половина дня" },
+    duration: { en: "Half day", uk: "Пів дня", ru: "Половина дня" },
     price: 1200,
     description: {
       en: "Editorial-style shoots for brands, teams, and personal projects.",
