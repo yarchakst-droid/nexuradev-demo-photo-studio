@@ -1,12 +1,17 @@
 "use client";
 
+import { useRef } from "react";
 import Reveal from "@/components/shared/Reveal";
 import { useLang } from "@/i18n/LangContext";
+import { useAutoplayVideo } from "@/lib/useAutoplayVideo";
 
 const REEL_VIDEO = "https://videos.pexels.com/video-files/7205347/7205347-uhd_2560_1440_25fps.mp4";
 
 export default function StudioReel() {
   const { t } = useLang();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useAutoplayVideo(videoRef);
 
   return (
     <section className="border-y border-line bg-sand-deep/40">
@@ -27,6 +32,7 @@ export default function StudioReel() {
 
         <Reveal delay={0.1} className="overflow-hidden rounded-3xl shadow-[0_30px_60px_-30px_rgba(23,20,15,0.35)]">
           <video
+            ref={videoRef}
             className="aspect-[4/5] w-full object-cover sm:aspect-[16/10]"
             src={REEL_VIDEO}
             autoPlay

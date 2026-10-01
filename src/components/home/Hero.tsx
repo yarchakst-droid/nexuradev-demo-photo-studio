@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { useLang } from "@/i18n/LangContext";
+import { useAutoplayVideo } from "@/lib/useAutoplayVideo";
 
 const HERO_VIDEO = "https://videos.pexels.com/video-files/34506426/14620220_2560_1440_30fps.mp4";
 const HERO_POSTER = "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=2000&q=80";
@@ -11,14 +12,18 @@ const HERO_POSTER = "https://images.unsplash.com/photo-1532712938310-34cb3982ef7
 export default function Hero() {
   const { t } = useLang();
   const ref = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const videoY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+
+  useAutoplayVideo(videoRef);
 
   return (
     <section ref={ref} className="relative flex min-h-[100svh] items-end overflow-hidden bg-ink">
       <motion.div style={{ y: videoY }} className="absolute inset-0">
         <video
+          ref={videoRef}
           className="h-full w-full object-cover"
           src={HERO_VIDEO}
           poster={HERO_POSTER}
